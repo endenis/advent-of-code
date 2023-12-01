@@ -7,7 +7,7 @@ end
 
 text_digits = {
   # This is a hack to finish the level fast. It would not work with longer combinations like "oneightwo".
-  # I made a more generic solution afterwards (the 2a.rb file).
+  # I made a more generic solution afterwards (the 2b.rb file).
   'zerone' => 01,
   'oneight' => 18,
   'twone' => 21,
