@@ -27,10 +27,11 @@ data[:time].count.times do |i|
   x1 = (-b + Math.sqrt(d)) / (2 * a)
   x2 = (-b - Math.sqrt(d)) / (2 * a)
 
-  # Getting all integers between two floats and adjusting in case x1 or x2 are integers
-  values = (x1.ceil .. x2.floor).to_a.map(&:to_f) - [x1, x2]
+  # Counting all integers between two floats and adjusting in case x1 or x2 are integers
+  adjustment = (x2.floor == x2 ? 1 : 0) + (x1.ceil == x1 ? 1 : 0)
+  integer_count = (x2.floor - x1.ceil + 1) - adjustment
 
-  solutions << {x1:, x2:, result: values.count}
+  solutions << {x1:, x2:, result: integer_count}
 end
 
 result = solutions.map { _1[:result] }.reduce :*
