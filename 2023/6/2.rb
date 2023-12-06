@@ -24,7 +24,7 @@ d = b ** 2 - 4 * a * c
 x1 = (-b + Math.sqrt(d)) / (2 * a)
 x2 = (-b - Math.sqrt(d)) / (2 * a)
 
-# Getting all integers between two floats and adjusting in case x1 or x2 are integers
+# Counting all integers between two floats and adjusting in case x1 or x2 are integers
 adjustment = (x2.floor == x2 ? 1 : 0) + (x1.ceil == x1 ? 1 : 0)
 integer_count = (x2.floor - x1.ceil + 1) - adjustment
 
