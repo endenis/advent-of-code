@@ -18,7 +18,6 @@ vector<vector<int>> parse_input_file(string filename) {
         vector<int> line_vector;
 
         for (char c : line) {
-            char c1 = '9';
             int joltage = atoi(&c);
             line_vector.push_back(joltage);
         }
